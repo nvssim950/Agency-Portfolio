@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Turnstile } from '@marsidev/react-turnstile';
 
 interface FormData {
   name: string;
@@ -25,6 +26,7 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus | null>(null);
   const [isVisible, setIsVisible] = useState(true); // For demo purposes
+  const [token, setToken] = useState<string | null>(null); // ⬅️ NEW state for Turnstile
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -35,6 +37,11 @@ const ContactForm = () => {
 
   const handleSubmit = async (e?: React.MouseEvent<HTMLButtonElement>) => {
     if (e) e.preventDefault();
+
+    if (!token) {
+      setSubmitStatus({ type: 'error', message: 'Please verify you are human.' });
+      return;
+    }
     
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -45,7 +52,8 @@ const ContactForm = () => {
         name: formData.name,
         email: formData.email,
         subject: `${formData.service} - ${formData.company}`, 
-        message: `Company: ${formData.company}\nService: ${formData.service}\n\nMessage:\n${formData.message}`
+        message: `Company: ${formData.company}\nService: ${formData.service}\n\nMessage:\n${formData.message}`,
+        token // ⬅️ send Turnstile token to backend
       };
 
       const response = await fetch('/api/contact', {
@@ -61,6 +69,7 @@ const ContactForm = () => {
       if (response.ok) {
         setSubmitStatus({ type: 'success', message: 'Message sent successfully! We\'ll get back to you within 24 hours.' });
         setFormData({ name: '', email: '', company: '', service: '', message: '' });
+        setToken(null);
       } else {
         setSubmitStatus({ type: 'error', message: data.error || 'Failed to send message' });
       }
@@ -161,6 +170,12 @@ const ContactForm = () => {
                 placeholder="Tell us about your project requirements..."
                 required
                 className="w-full px-4 py-3 bg-gray-800/80 border border-gray-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 focus:bg-gray-800 transition-all duration-300 resize-none focus:scale-105"
+              />
+
+              {/* ⬅️ Turnstile widget added here */}
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={(token: string) => setToken(token)}
               />
 
               {/* Submit Button */}
