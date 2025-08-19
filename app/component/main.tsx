@@ -730,10 +730,10 @@ const animateCounter = (
                 </blockquote>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                    MZ
+                    SM
                   </div>
                   <div>
-                    <div className="font-semibold text-white">Mohammed Zougar</div>
+                    <div className="font-semibold text-white">Sarah Mitchell</div>
                     <div className="text-sm text-gray-400">Operations Manager, TechFlow</div>
                   </div>
                 </div>
