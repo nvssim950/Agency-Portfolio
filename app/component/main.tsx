@@ -430,12 +430,13 @@ const animateCounter = (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => scrollToSection('projects')}
-                className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/20"
-              >
-                View Our Work
-                <ArrowRight className="w-5 h-5" />
-              </button>
+  onClick={() => window.open("https://calendly.com/nassimbddm/30min", "_blank")}
+  className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/20"
+>
+  Schedule a Call
+  <ArrowRight className="w-5 h-5" />
+</button>
+
               <button
                 onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10"
