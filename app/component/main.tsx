@@ -703,8 +703,6 @@ const animateCounter = (
   </div>
 </section>
     <ContactForm/>
-</section>
-    <ContactForm/>
 {/* Social Proof Section */}
       <section id="social-proof" className="py-20 bg-gradient-to-b from-gray-900/40 to-gray-900/60 relative" data-animate>
         <div className="container mx-auto px-6">
