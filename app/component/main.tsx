@@ -720,7 +720,7 @@ const animateCounter = (
               </p>
               <div className="space-y-2">
                 <p className="text-gray-300 hover:text-white transition-colors duration-300">
-                  triomind@gmail.com
+                 its.nvsagency@gmail.com
                 </p>
                 <p className="text-gray-300 hover:text-white transition-colors duration-300">
                  +213 656-404-460
@@ -801,7 +801,7 @@ const animateCounter = (
           <div className="pt-6 border-t border-white/10">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                &copy; 2025 TrioMind Agency. All rights reserved.
+                &copy; 2025 NVS Agency. All rights reserved.
               </p>
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Privacy Policy</a>
