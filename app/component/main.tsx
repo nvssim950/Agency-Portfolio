@@ -110,7 +110,8 @@ const Main = () => {
     stats: false,
     services: false,
     projects: false,
-    contact: false
+    contact: false,
+    'social-proof': false
   });
   const [footerDropdowns, setFooterDropdowns] = useState({
     services: false,
