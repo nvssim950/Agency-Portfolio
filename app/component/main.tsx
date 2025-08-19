@@ -126,8 +126,8 @@ const Main = () => {
   });
 
   const stats = [
-    { icon: <Users className="w-8 h-8" />, label: "Happy Clients", value: 50, suffix: "+" },
-    { icon: <Award className="w-8 h-8" />, label: "Projects Completed", value: 70, suffix: "+" },
+    { icon: <Users className="w-8 h-8" />, label: "Happy Clients", value: 45, suffix: "+" },
+    { icon: <Award className="w-8 h-8" />, label: "Projects Completed", value: 52, suffix: "+" },
     { icon: <Clock className="w-8 h-8" />, label: "Years Experience", value: 3, suffix: "+" },
     { icon: <Star className="w-8 h-8" />, label: "Client Satisfaction", value: 98, suffix: "%" }
   ];
@@ -180,9 +180,9 @@ const animateCounter = (
             
             // Trigger counter animations when stats section becomes visible
             if (id === 'stats' && !isVisible['stats']) {
-              setTimeout(() => animateCounter(150, 'clients'), 200);
-              setTimeout(() => animateCounter(200, 'projects'), 400);
-              setTimeout(() => animateCounter(5, 'experience'), 600);
+              setTimeout(() => animateCounter(45, 'clients'), 200);
+              setTimeout(() => animateCounter(52, 'projects'), 400);
+              setTimeout(() => animateCounter(3, 'experience'), 600);
               setTimeout(() => animateCounter(98, 'satisfaction'), 800);
             }
           }
