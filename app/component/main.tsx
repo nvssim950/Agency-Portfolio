@@ -703,7 +703,97 @@ const animateCounter = (
   </div>
 </section>
     <ContactForm/>
+</section>
+    <ContactForm/>
+{/* Social Proof Section */}
+      <section id="social-proof" className="py-20 bg-gradient-to-b from-gray-900/40 to-gray-900/60 relative" data-animate>
+        <div className="container mx-auto px-6">
+          {/* Testimonials */}
+          <div className={`mb-20 transition-all duration-1000 delay-400 ${
+            isVisible['social-proof'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
+            <h3 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+              What Our Clients Say
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Testimonial 1 */}
+              <div className="p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(4)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <Star key='9' className="w-5 h-5 fill-black-400 text-yellow-400" />
+                </div>
+                <blockquote className="text-gray-300 mb-6 leading-relaxed">
+                  "NVS Agency transformed our entire workflow with their automation solutions. We went from spending 15 hours per week on manual data entry to having everything automated. The ROI was immediate and substantial."
+                </blockquote>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                    MZ
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">Mohammed Zougar</div>
+                    <div className="text-sm text-gray-400">Operations Manager, TechFlow</div>
+                  </div>
+                </div>
+              </div>
 
+              {/* Testimonial 2 */}
+              <div className="p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <blockquote className="text-gray-300 mb-6 leading-relaxed">
+                  "The web development team at NVS delivered beyond our expectations. Our new SaaS platform has increased user engagement by 400% and our conversion rates have tripled. Professional, efficient, and innovative."
+                </blockquote>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold">
+                    MJ
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">Michael Johnson</div>
+                    <div className="text-sm text-gray-400">CEO, DataSync Solutions</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <blockquote className="text-gray-300 mb-6 leading-relaxed">
+                  "Working with NVS Agency was a game-changer for our e-commerce business. Their automation reduced our order processing time by 90% and eliminated human errors. We couldn't be happier with the results."
+                </blockquote>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                    EK
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">Emma Kim</div>
+                    <div className="text-sm text-gray-400">Founder, StyleHub</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         
+
+
+            {/* Partner Badges */}
+            <div className="mt-16 text-center">
+              <p className="text-gray-400 mb-8">Certified Partners & Trusted Collaborators</p>
+            </div>
+            </div>
+        
+
+      </section>
       {/* Footer */}
       <footer className="py-9 bg-gradient-to-b from-transparent to-gray-900/50 border-t border-white/10">
         <div className="container mx-auto px-6">
